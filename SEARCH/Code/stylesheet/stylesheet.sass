@@ -1,0 +1,122 @@
+@font-face
+  font-family: "SpaceGrotesk-bold"
+  src: url("../assets/fonts/SpaceGrotesk-Bold.woff")
+
+@font-face
+  font-family: "SpaceGrotesk-Med"
+  src: url("../assets/fonts/SpaceGrotesk-Medium.woff")
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 40px 0 0 0
+
+  .wrapper
+    font-family: SpaceGrotesk-Bold
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .navigation
+      width: 90%
+      display: flex
+      justify-content: space-between
+
+      .nav-links
+        display: flex
+
+        p
+          margin-left: 50px
+          cursor: pointer
+
+    .search-wrapper
+      padding-top: 100px
+      width: 70%
+      border-bottom: 1px solid #F1F1F1
+
+      .search-bar
+        height: 120px
+        display: flex
+        align-items: center
+
+        input
+          height: 120px
+          border: 0
+          font-size: 100px
+          width: 33%
+          text-transform: uppercase
+          transition: all 0.3s ease-in-out
+
+          &:focus
+            outline: none
+            width: 100%
+            cursor: auto
+
+        input:focus::-webkit-input-placeholder
+          opacity: 0
+
+        \::placeholder
+          color: #F1F1F1
+
+        img
+          height: 30px
+          cursor: pointer
+
+    .main-content-wrapper
+      width: 70%
+      height: 400px
+      position: relative
+
+      .web-content
+        padding-top: 50px
+        padding-bottom: 50px
+        display: flex
+        justify-content: space-around
+        // background-color: white
+
+        .holder
+          flex-grow: 1
+          height: 300px
+          background-color: #FBFBFB
+          margin-right: 30px
+          opacity: 1
+          transition: all 300ms ease-in-out
+
+        .holder:nth-child(4)
+          margin-right: 0px
+
+      .loader
+        position: absolute
+        width: 100%
+        text-align: center
+        top: 45%
+        z-index: -1
+        display: none
+        svg
+          height: 35px
+        p
+          font-family: "Roboto"
+
+    .footer-wrapper
+      border-top: 1px solid #F1F1F1
+      width: 70%
+      display: flex
+
+      .col
+        margin-right: 200px
+
+        p
+          font-family: "Roboto"
+          margin: 10px 0 10px 0
+          cursor: pointer
+
+
+
+
+.fadeOut
+  opacity: 0
+.fadeIn
+  opacity: 1
